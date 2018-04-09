@@ -6,33 +6,30 @@
   background-position: center;
   position: fixed;
   background-size: cover;
+  z-index: -1;
 }
 
-/*the main container will be rotated 90 degrees so the bottom is the right, and the top is the left*/
-
-.main-container {
-  width: 200px;
-  height: 1200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  
-  background-color: yellow;
-  border: 1px solid black; 
-  
-/*  this will rotate the container 90 deg counter clockwise*/
-  transform: rotate(-90deg) translateY(-100px);
-  transform-origin: top right; 
-  
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
 }
 
-/*this is for the children divs (the items)*/
-.main-container > div {
-  width: 80px;
-  height: 90px;
-  background-color: cornflowerblue;  
-  border: 1px dashed red; 
-  
-/*  now we rotate the children clockwise 90deg*/
-  transform: rotate(90deg); 
-  transform-origin: bottom right;  
+.grid-container>div{
+  border: 3px solid pink;
+  height: 100px;
 }
+
+.content {
+  display: grid;
+  grid-template-columns: 80px;
+  grid-auto-columns: 80px;
+  grid-auto-flow: column;
+  padding: 50px;
+}
+
+.content>div {
+  border: 2px solid red;
+  margin: 10px;
+}
+
+
