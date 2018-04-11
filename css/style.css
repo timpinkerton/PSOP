@@ -11,25 +11,24 @@
 
 .grid-container {
   display: grid;
-  grid-gap: 20px;
-}
+  grid-gap: 5px;
 
-.grid-container>div{
-  border: 3px solid pink;
-  height: 100px;
-}
-
-.content {
-  display: grid;
   grid-template-columns: 80px;
   grid-auto-columns: 80px;
   grid-auto-flow: column;
-  padding: 50px;
+
+  border: 5px solid green;
+
+  height: 500px;
+
+  align-items: center;
+
+/*  padding-top: 15%;*/
 }
 
-.content>div {
-  border: 2px solid red;
-  margin: 10px;
+.grid-container>div{
+  border: 5px solid pink;
 }
+
 
 
